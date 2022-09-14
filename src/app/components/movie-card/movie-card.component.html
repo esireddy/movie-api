@@ -1,0 +1,7 @@
+<div *ngIf="movie">
+    <div class="image">
+        <div class="wrapper">
+            <a class="image" title="{{movie.title}}" [routerLink]="['/movie-details', movie]"> <img id="{{movie.id}}" src="{{imageBaseUrl}}{{movie.poster_path}}" /> </a>
+        </div>
+    </div>
+</div>
