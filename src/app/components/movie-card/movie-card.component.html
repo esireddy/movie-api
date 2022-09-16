@@ -1,7 +1,17 @@
 <div *ngIf="movie">
     <div class="image">
-        <div class="wrapper">
-            <a class="image" title="{{movie.title}}" [routerLink]="['/movie-details', movie]"> <img id="{{movie.id}}" src="{{imageBaseUrl}}{{movie.poster_path}}" /> </a>
+        <mat-menu #appMenu="matMenu" yPosition="below">
+            <button (click)="onAddToWatchlist(movie)" mat-menu-item>Add to watchlist</button>
+            <button (click)="onAddToFavoriteslist(movie)" mat-menu-item>Add to favorites</button>
+        </mat-menu>
+        <div class="options glyphicons_v2" data-role="tooltip">
+            <button mat-icon-button [matMenuTriggerFor]="appMenu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
         </div>
+        <div class="wrapper">
+            <a class="image" title="{{movie.title}}" [routerLink]="['/movie-details', movie.id]"> <img id="{{movie.id}}" src="{{imageBaseUrl}}{{movie.poster_path}}" /> </a>
+        </div>
+        
     </div>
 </div>

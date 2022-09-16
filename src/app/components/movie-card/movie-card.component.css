@@ -1,0 +1,26 @@
+.glyphicons_v2 {
+    position: relative;
+    top: -10;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1em;
+    min-height: 1em;
+    width: 1em;
+    height: 1em;
+    line-height: inherit;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+button.mat-button .mat-icon,
+a.mat-button .mat-icon,
+a.mat-raised-button .mat-icon,
+a.mat-flat-button .mat-icon,
+a.mat-stroked-button .mat-icon {
+  vertical-align: top;
+  font-size: 1.25em;
+}

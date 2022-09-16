@@ -1,5 +1,7 @@
-<div *ngIf="(trendingMovies$ | async)?.results">
-    <ul *ngFor="let mv of (trendingMovies$ | async)?.results">
-        <app-movie-card [movie]="mv"> </app-movie-card>
-    </ul>
-</div>
+    <div *ngIf="(trendingMovies$ | async)?.results">
+        <mat-grid-list cols="2">
+            <mat-grid-tile *ngFor="let mv of (trendingMovies$ | async)?.results">
+                <app-movie-card [movie]="mv"> </app-movie-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>

@@ -8,6 +8,12 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { MovieHttpInterceptor } from './movie-http.interceptor';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatGridList, MatGridListModule, MatGridTile} from '@angular/material/grid-list'
+
 
 @NgModule({
   declarations: [
@@ -19,7 +25,9 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    MatSliderModule,MatMenuModule, MatIconModule,MatGridListModule,
+    BrowserAnimationsModule,
+    AppRoutingModule    
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
